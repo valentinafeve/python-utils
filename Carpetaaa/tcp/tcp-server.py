@@ -14,7 +14,7 @@ print("I'm  listening on %s in the port %d" % (bind_ip,bind_port))
 
 def handle_client(client_socket):
 	request = client_socket.recv(4096)
-	client_socket.send("ACK!".encode())
+	client_socket.send("Hey dude".encode())
 	client_socket.close()
 
 while True:
