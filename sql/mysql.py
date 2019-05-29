@@ -1,10 +1,11 @@
 import mysql.connector
 
 mydb = mysql.connector.connect(
-	host="200.3.149.139",
-	user="yatek",
-	password="bunterWind45"
+	host="localhost",
+	user="root",
+	password="albino bear"
 )
 
 mycursor = mydb.cursor()
 mycursor.execute("SHOW DATABASES")
+mycursor.execute("SELECT * FROM PEOPLE")
