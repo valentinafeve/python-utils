@@ -14,6 +14,7 @@ stemmer = SnowballStemmer(language='english')
 
 def lemmatize_stemming(text):
     return stemmer.stem(WordNetLemmatizer().lemmatize(text, pos='v'))
+    
 def preprocess(text):
     result = []
     for token in gensim.utils.simple_preprocess(text):
