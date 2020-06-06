@@ -14,6 +14,7 @@ f = open("./data/text", "r+")
 word_vectors = {}
 
 center = np.array([ LIMIT/2 for x in range(DIMENSIONS)])
+
 for line in f.readlines():
 
     line = line.replace(",","")
@@ -24,7 +25,6 @@ for line in f.readlines():
 
     for word in words:
         new_vector = word_vectors.get( word , center) + random_array
-
         word_vectors[word.lower()] = new_vector
 
 # Plot the data
